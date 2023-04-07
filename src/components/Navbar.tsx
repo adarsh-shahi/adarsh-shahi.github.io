@@ -16,9 +16,9 @@ export default function Navbar() {
 					Adarsh Shahi
 				</NavLink>
 				<p className="">/</p>
-				<p className="tracking-wider">SOFTWARE DEVELOPER</p>
+				<p className="tracking-widest">SOFTWARE DEVELOPER</p>
 			</div>
-			<div className="ml-auto flex gap-8 items-center">
+			<div className="ml-auto flex gap-8 items-center tracking-wider">
 				<NavLink className={navClasses} to="/">
 					ABOUT ME
 				</NavLink>

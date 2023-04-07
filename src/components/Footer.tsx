@@ -7,7 +7,7 @@ import {
 
 export default function Footer() {
 	return (
-		<div className="px-10 py-6 flex">
+		<div className="px-10 py-6 flex items-center">
 			<div>
 				<p>&copy; 2023 by Adarsh Shahi</p>
 				<p>Pune, India</p>
