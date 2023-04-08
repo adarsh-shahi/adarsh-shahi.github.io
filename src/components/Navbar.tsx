@@ -9,7 +9,7 @@ export default function Navbar() {
   `;
 
 	return (
-		<div className="flex px-10 py-8 sticky top-0 z-10 ">
+		<div className="flex px-10 py-8 sticky top-0 z-10">
 			<div className="flex items-center gap-3">
 				<div className="bg-blue-600 w-4 h-4"></div>
 				<NavLink to="/" className="font-bold text-2xl">
