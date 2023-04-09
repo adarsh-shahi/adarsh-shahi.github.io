@@ -108,9 +108,9 @@ export default function Contact() {
 				<div className="bg-blue-600 w-4 h-4"></div>
 				<h3 className="text-2xl font-semibold">Let's talk</h3>
 			</div>
-			<div className="p-10 drop-shadow-xl bg-white rounded-3xl">
+			<div className="py-10 md:px-10 sm:px-5 drop-shadow-xl bg-white rounded-3xl">
 				<form onSubmit={handleFormSubmit} className="flex flex-col gap-10">
-					<div className="flex gap-5">
+					<div className="flex md:flex-row sm:flex-col gap-5">
 						<div className="flex flex-col">
 							<label htmlFor="">First Name *</label>
 							<input
@@ -122,7 +122,7 @@ export default function Contact() {
 									})
 								}
 								required
-								className="border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
+								className="sm:w-64 md:w-auto border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
 								type="text"
 							/>
 						</div>
@@ -137,7 +137,7 @@ export default function Contact() {
 									})
 								}
 								required
-								className="border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
+								className="sm:w-64 md:w-auto border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
 								type="text"
 							/>
 						</div>
@@ -153,7 +153,7 @@ export default function Contact() {
 								})
 							}
 							required
-							className="border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
+							className="sm:w-64 md:w-auto border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
 							type="text"
 						/>
 					</div>
@@ -167,7 +167,7 @@ export default function Contact() {
 									paylaod: e.target.value,
 								})
 							}
-							className="border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
+							className="sm:w-64 md:w-auto border-b-2 border-gray-600 outline-none p-2 focus:border-blue-500"
 							type="text"
 						/>
 					</div>
@@ -187,7 +187,7 @@ export default function Contact() {
 							id=""
 							cols={10}
 							rows={10}
-							className="border-b-2 border-gray-600 outline-none focus:border-blue-500"
+							className="sm:w-64 md:w-auto border-b-2 border-gray-600 outline-none focus:border-blue-500"
 						></textarea>
 					</div>
 					<button
