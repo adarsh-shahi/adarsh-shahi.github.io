@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Octokit } from "octokit";
+import { RxArrowTopRight } from "react-icons/rx";
 
 const octokit = new Octokit({
 	auth: process.env.REACT_APP_PERSONAL_ACCESS_TOKEN,
@@ -36,7 +37,7 @@ export default function Project() {
 	const [project, setProject] =
 		useState<IPropjectStateType>(projectInitialValue);
 
-	const activeProjectName = "bg-blue-400 p-2 rounded-lg text-white";
+	const activeProjectName = "bg-blue-500 p-2 rounded-lg text-white";
 
 	const getProjectInfo = async (projectName: string) => {
 		const { data } = await octokit.request(
@@ -82,7 +83,9 @@ export default function Project() {
 			renderedProjectNames.push(
 				<div
 					className={`cursor-pointer ${
-						project.name === projects.get(key) ? activeProjectName : ""
+						project.name === projects.get(key)
+							? activeProjectName
+							: "hover:bg-blue-100 p-2 rounded-lg"
 					}`}
 					key={key}
 					onClick={() => handleProjectNameClick(key)}
@@ -94,26 +97,44 @@ export default function Project() {
 
 	return (
 		<div className="grow flex justify-center items-center">
-			<div className="flex gap-10 shadow-2xl p-10 rounded-3xl">
-				<div className="flex flex-col gap-10 border-r-2 pr-5 capitalize">
+			<div className="flex md:flex-row sm:flex-col gap-10 shadow-2xl p-10 rounded-3xl md:w-auto sm:w-screen">
+				<div className="flex flex-col md:gap-10 sm:gap-5 md:border-r-2 md:border-b-0 sm:border-b-2 sm:border-gray-400 md:pr-5 md:pb-0 sm:pb-5 capitalize">
 					{renderedProjectNames}
 				</div>
-				<div className="w-96 flex flex-col gap-5">
+				<div className="md:w-96 sm:w-auto flex flex-col gap-5">
 					<div>{project.description}</div>
 					<div className="flex gap-5">
-						<a target="_blank" rel="noreferrer" href={project.html_url}>
+						<a
+							className="flex items-center gap-2 border-2 border-gray-600 px-2 text-lg rounded-md hover:text-white hover:bg-gray-800"
+							target="_blank"
+							rel="noreferrer"
+							href={project.html_url}
+						>
 							Github
+							<RxArrowTopRight />
 						</a>
 						{project.homepage && !project.homepage.includes("npm") ? (
-							<a target="_blank" rel="noreferrer" href={project.homepage}>
+							<a
+								className="flex items-center gap-2 border-2 border-gray-600 px-2 text-lg rounded-md hover:text-white hover:bg-gray-800"
+								target="_blank"
+								rel="noreferrer"
+								href={project.homepage}
+							>
 								Live
+								<RxArrowTopRight />
 							</a>
 						) : (
 							""
 						)}
 						{project.homepage && project.homepage.includes("npm") ? (
-							<a target="_blank" rel="noreferrer" href={project.homepage}>
+							<a
+								className="flex items-center gap-2 border-2 border-gray-600 px-2 text-lg rounded-md hover:text-white hover:bg-gray-800"
+								target="_blank"
+								rel="noreferrer"
+								href={project.homepage}
+							>
 								NPM
+								<RxArrowTopRight />
 							</a>
 						) : (
 							""
@@ -121,7 +142,7 @@ export default function Project() {
 					</div>
 					<div className="flex gap-5 flex-wrap mt-auto">
 						{project.topics.map((topic) => (
-							<div className="bg-blue-600 text-white px-3 py-1 rounded-2xl text-sm">
+							<div className="bg-purple-800 text-white px-3 py-1 rounded-2xl text-sm">
 								{topic}
 							</div>
 						))}
