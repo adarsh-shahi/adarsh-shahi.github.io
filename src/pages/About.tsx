@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 
 export default function About() {
 	return (
-		<div className="bg-gradient-to-r from-[#E6DACE] to-40% to-white from-40% to grow w-screen relative">
-			<div className="flex justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
-				<section className="bg-[#F4ECE6]  w-80 drop-shadow-xl relative hover:-translate-y-3 duration-300">
-					<div className="flex flex-col gap-8 items-center py-8">
+		<div className="bg-gradient-to-r from-[#E6DACE] to-40% to-white from-40% to grow w-screen md:relative">
+			<div className="sm:flex-col sm:items-center md:bg-transparent sm:bg-white md:flex-row flex md:justify-center md:items-center md:absolute md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 ">
+				<section className="bg-[#F4ECE6] w-80 drop-shadow-xl md:relative md:hover:-translate-y-3 md:duration-300">
+					<div className="flex flex-col gap-8 items-center py-20 relative">
 						<img
-							className="rounded-full w-48 h-48"
+							className="rounded-full w-48 h-48 lg:w-36 lg:h-36"
 							src={window.location.origin + "/Adarsh_Shahi_whiteBg.jpg"}
 							alt="adarsh shahi"
 						/>
@@ -24,7 +24,7 @@ export default function About() {
 						<div className="bg-blue-600 w-16 h-1"></div>
 						<p className="tracking-widest text-lg">SOFTWARE DEVELOPER</p>
 					</div>
-					<div className="flex text-xl py-4 gap-5 justify-center bg-white absolute bottom-0 w-full">
+					<div className="flex text-xl py-4 gap-5 justify-center bg-white absolute -bottom-0 w-full">
 						<a
 							href="https://twitter.com/_adarsh_shahi"
 							target="_blank"
@@ -55,9 +55,11 @@ export default function About() {
 						</a>
 					</div>
 				</section>
-				<section className="p-8 w-96 flex flex-col gap-5">
-					<h1 className="text-8xl font-semibold">Hello</h1>
-					<p className="font-medium text-lg">
+				<section className="p-8 w-96 lg:w-80 flex flex-col gap-5">
+					<h1 className="xl:text-8xl lg:text-5xl md:text-4xl sm:text-3xl font-semibold">
+						Hello
+					</h1>
+					<p className="font-medium text-lg lg:text-base">
 						As a software developer, I specialize in using the latest
 						technologies like TypeScript, React, Node.js, MongoDB, and
 						PostgreSQL to build scalable and user-friendly web and mobile
