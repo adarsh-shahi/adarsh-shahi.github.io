@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function About() {
 	return (
-		<div className="bg-gradient-to-r from-[#E6DACE] to-40% to-white from-40% to grow w-screen md:relative">
+		<div className="bg-gradient-to-r from-[#E6DACE] to-40% to-white from-40% to grow w-screen md:relative ">
 			<div className="sm:flex-col sm:items-center md:bg-transparent sm:bg-white md:flex-row flex md:justify-center md:items-center md:absolute md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 ">
 				<section className="bg-[#F4ECE6] w-80 drop-shadow-xl md:relative md:hover:-translate-y-3 md:duration-300">
 					<div className="flex flex-col gap-8 items-center py-20 relative">
@@ -55,7 +55,7 @@ export default function About() {
 						</a>
 					</div>
 				</section>
-				<section className="p-8 w-96 lg:w-80 flex flex-col gap-5">
+				<section className="py-8 md:px-8 sm:px-6 md:w-96 flex flex-col gap-5">
 					<h1 className="xl:text-8xl lg:text-5xl md:text-4xl sm:text-3xl font-semibold">
 						Hello
 					</h1>

@@ -102,7 +102,7 @@ export default function Project() {
 					{renderedProjectNames}
 				</div>
 				<div className="md:w-96 sm:w-auto flex flex-col gap-5">
-					<div>{project.description}</div>
+					<div className="duration-700">{project.description}</div>
 					<div className="flex gap-5">
 						<a
 							className="flex items-center gap-2 border-2 border-gray-600 px-2 text-lg rounded-md hover:text-white hover:bg-gray-800"
@@ -142,7 +142,7 @@ export default function Project() {
 					</div>
 					<div className="flex gap-5 flex-wrap mt-auto">
 						{project.topics.map((topic) => (
-							<div className="bg-purple-800 text-white px-3 py-1 rounded-2xl text-sm">
+							<div className="bg-purple-800 duration-700 text-white px-3 py-1 rounded-2xl text-sm">
 								{topic}
 							</div>
 						))}

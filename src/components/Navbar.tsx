@@ -22,13 +22,15 @@ export default function Navbar() {
 
 	return (
 		<div className="flex px-10 sm:px-5 py-8 sticky top-0 z-10 lg:text-base xl:text-lg md:text-sm bg-white">
-			<div className="flex items-center gap-3 md:w-auto sm:w-screen">
-				<div className="bg-blue-600 w-4 h-4"></div>
-				<NavLink to="/" className="font-bold text-2xl sm:text-xl md:text-2xl">
+			<div className="flex items-center flex-wrap gap-3 md:w-auto sm:w-screen">
+				<div className="bg-blue-600 md:w-4 md:h-4 sm:w-3 sm:h-3"></div>
+				<NavLink to="/" className="font-bold sm:text-xl md:text-2xl">
 					Adarsh Shahi
 				</NavLink>
 				<p className="">/</p>
-				<p className="tracking-widest">SOFTWARE DEVELOPER</p>
+				<p className="tracking-widest md:text-lg sm:text-base">
+					SOFTWARE DEVELOPER
+				</p>
 				{isMenuActive && (
 					<RxHamburgerMenu
 						onClick={() => {
@@ -36,7 +38,7 @@ export default function Navbar() {
 							setMenuActive(false);
 							setCrossActive(true);
 						}}
-						className="text-2xl md:hidden block ml-auto"
+						className="text-2xl md:hidden block ml-auto cursor-pointer"
 					/>
 				)}
 				{isCrossActive && (
@@ -46,13 +48,13 @@ export default function Navbar() {
 							setCrossActive(false);
 							setMenuActive(true);
 						}}
-						className="text-2xl md:hidden block ml-auto"
+						className="text-2xl md:hidden block ml-auto cursor-pointer"
 					/>
 				)}
 			</div>
 			<div
 				id="nav"
-				className="ml-auto md:flex md:flex-row md:gap-8 sm:gap-4 md:opacity-100 opacity-0 md:bg-white md:w-auto md:items-center z-[-1] md:z-auto items-start md:static top-20 absolute flex flex-col tracking-wider"
+				className="ml-auto md:flex md:flex-row md:gap-8 sm:gap-4 md:opacity-100 opacity-0 md:bg-white md:w-auto md:items-center z-[-1] md:z-auto items-start md:static top-28 rounded-2xl right-5 bg-slate-300 sm:drop-shadow-2xl sm:duration-500 p-5 absolute flex flex-col tracking-wider"
 			>
 				<NavLink
 					onClick={() => {
@@ -72,7 +74,7 @@ export default function Navbar() {
 					className={navClasses}
 					to="/projects"
 				>
-					PROJECT
+					PROJECTS
 				</NavLink>
 				<NavLink
 					onClick={() => {
@@ -88,7 +90,7 @@ export default function Navbar() {
 					href="https://drive.google.com/file/d/1T-8twqN0U_SfKKSFX9kryuf1E9GUOtBj/view?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
-					className="bg-blue-600 text-white px-3 py-2 flex items-center gap-1"
+					className="bg-blue-600 sm:rounded-full md:rounded-none text-white px-3 py-2 flex items-center gap-1"
 					onClick={() => {
 						setMenuActive(true);
 						setCrossActive(false);
