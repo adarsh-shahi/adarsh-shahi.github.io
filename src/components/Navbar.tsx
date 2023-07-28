@@ -87,7 +87,7 @@ export default function Navbar() {
 					CONTACT
 				</NavLink>
 				<a
-					href="https://drive.google.com/file/d/1T-8twqN0U_SfKKSFX9kryuf1E9GUOtBj/view?usp=sharing"
+					href="https://drive.google.com/file/d/1Nyg8jV6yTurNnkl5Bx_MpsyiJu5UV8uO/view?usp=sharing"
 					target="_blank"
 					rel="noreferrer"
 					className="bg-blue-600 sm:rounded-full md:rounded-none text-white px-3 py-2 flex items-center gap-1"
