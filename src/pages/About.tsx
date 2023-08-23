@@ -69,7 +69,7 @@ export default function About() {
 					</p>
 					<div className="flex gap-5 tracking-widest">
 						<a
-							href="https://drive.google.com/file/d/1T-8twqN0U_SfKKSFX9kryuf1E9GUOtBj/view?usp=sharing"
+							href="https://drive.google.com/file/d/18fnupyINboaPm62cWi99V62JLGLrvdHM/view?usp=sharing"
 							target="_blank"
 							rel="noreferrer"
 							className="bg-blue-600 border-2 border-blue-600 text-white px-3 py-1 hover:-translate-y-1 duration-500"
